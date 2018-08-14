@@ -1,14 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js css-menubar" lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/global/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/global/css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="assets/css/site.min.css">
+  <link href="assets/skins/pink.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Plugins -->
+  <link rel="stylesheet" href="assets/global/vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="assets/global/vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="assets/global/vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="assets/global/vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="assets/global/vendor/flag-icon-css/flag-icon.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="assets/global/fonts/material-design/material-design.min.css">
+  <link rel="stylesheet" href="assets/global/fonts/brand-icons/brand-icons.min.css">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
   <title>Portal</title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="assets/global/vendor/breakpoints/breakpoints.js"></script>
+  <script>
+    Breakpoints();
+  </script>
+
+
 </head>
-<body>
-  <app-root></app-root>
+<body class="dashboard">
+<script src="assets/global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+<script src="assets/global/vendor/jquery/jquery.js"></script>
+<script src="assets/global/vendor/popper-js/umd/popper.min.js"></script>
+<script src="assets/global/vendor/bootstrap/bootstrap.js"></script>
+<script src="assets/global/vendor/animsition/animsition.js"></script>
+<script src="assets/global/vendor/mousewheel/jquery.mousewheel.js"></script>
+<script src="assets/global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+<script src="assets/global/vendor/asscrollable/jquery-asScrollable.js"></script>
+<script src="assets/global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+
+<script src="assets/global/js/Component.js"></script>
+<script src="assets/global/js/Plugin.js"></script>
+<script src="assets/global/js/Base.js"></script>
+<script src="assets/global/js/Config.js"></script>
+
+<script src="assets/js/Section/Menubar.js"></script>
+<script src="assets/js/Section/GridMenu.js"></script>
+<script src="assets/js/Section/Sidebar.js"></script>
+<script src="assets/js/Section/PageAside.js"></script>
+<script src="assets/js/Plugin/menu.js"></script>
+
+
+<script src="assets/global/js/config/colors.js"></script>
+
+<script src="assets/js/config/tour.js"></script>
+<script>Config.set('assets', '../assets');</script>
+<script src="assets/js/Site.js"></script>
+<script src="assets/global/js/Plugin/asscrollable.js"></script>
+<script src="assets/global/js/Plugin/slidepanel.js"></script>
+<script src="assets/global/js/Plugin/switchery.js"></script>
+<script src="assets/global/js/Plugin/matchheight.js"></script>
+<script src="assets/global/js/Plugin/jvectormap.js"></script>
+<script src="assets/global/js/Plugin/peity.js"></script>
+
+
+<script>
+  Config.set('assets', '../assets');
+</script>
+<script src="assets/js/Site.js"></script>
+<script>
+  (function (document, window, $) {
+    'use strict';
+
+    var Site = window.Site;
+
+    $(document).ready(function () {
+      Site.run();
+    });
+  })(document, window, jQuery);
+</script>
+<app-root></app-root>
 </body>
 </html>
