@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GeomapComponent } from './geomap/geomap.component';
+import { ConfigurationComponent } from './configuration/configuration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GeomapComponent
+    GeomapComponent,
+    ConfigurationComponent
   ],
   imports: [
     BrowserModule,
