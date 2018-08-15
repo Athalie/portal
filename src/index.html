@@ -15,8 +15,11 @@
     <link rel="stylesheet" href="assets/global/vendor/animsition/animsition.css">
     <link rel="stylesheet" href="assets/global/vendor/asscrollable/asScrollable.css">
     <link rel="stylesheet" href="assets/global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="assets/global/vendor/intro-js/introjs.css">
     <link rel="stylesheet" href="assets/global/vendor/slidepanel/slidePanel.css">
     <link rel="stylesheet" href="assets/global/vendor/flag-icon-css/flag-icon.css">
+    <link rel="stylesheet" href="assets/global/vendor/waves/waves.css">
+    <link rel="stylesheet" href="assets/global/vendor/jvectormap/jquery-jvectormap.css">
     <link rel="stylesheet" href="assets/css/map.css">
     
     <!-- Fonts -->
@@ -35,7 +38,7 @@
   
   
   </head>
-  <body class="animsition dashboard">
+  <body class="animsition page-map page-map-full">
     <app-root></app-root>
   
     
@@ -72,9 +75,7 @@
     
     <script src="assets/global/js/config/colors.js"></script>
     <script src="assets/js/config/tour.js"></script>
-    <script>
-      Config.set('assets', '../assets');
-    </script>
+    <script>Config.set('assets', '../assets');</script>
   
     <script src="assets/js/Site.js"></script>
     <script>
@@ -88,10 +89,14 @@
         });
       })(document, window, jQuery);
     </script>
-  
     <script src="assets/global/js/Plugin/asscrollable.js"></script>
     <script src="assets/global/js/Plugin/slidepanel.js"></script>
     <script src="assets/global/js/Plugin/switchery.js"></script>
     <script src="assets/global/js/Plugin/gmaps.js"></script>
+    
+    <script src="assets/js/map-google.js"></script>
+    <script src="assets/js/map-vector.js"></script>
+  
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
   </body>
 </html>
