@@ -277,7 +277,7 @@
         var _this2 = this;
 
         var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
-
+//debugger;
         $BODY.addClass('site-menubar-changing');
 
         doing.call(this);
