@@ -1,0 +1,8 @@
+{
+  "/portal/*": {
+    "target": "http://81.211.80.37:5000",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
