@@ -1,0 +1,35 @@
+<div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
+  <div class="page-content vertical-align-middle">
+    <div class="panel">
+      <div class="panel-body">
+        <div class="brand">
+          <h2 class="brand-text font-size-18">Портал управления энергией</h2>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group form-material floating" data-plugin="formMaterial">
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <label class="floating-label" for="email">Электронный адрес</label>
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">Электронный адрес обязателен к заполнению</div>
+            </div>
+          </div>
+          <div class="form-group form-material floating" data-plugin="formMaterial">
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <label class="floating-label">Пароль</label>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Пароль обязателен к заполнению</div>
+            </div>
+          </div>
+          <div class="form-group clearfix">
+            <div class="checkbox-custom checkbox-inline checkbox-primary checkbox-lg float-left">
+              <input type="checkbox" id="inputCheckbox" name="remember" checked>
+              <label for="inputCheckbox">Запомнить данные</label>
+            </div>
+            <button class="btn btn-primary btn-block btn-lg mt-40">Войти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

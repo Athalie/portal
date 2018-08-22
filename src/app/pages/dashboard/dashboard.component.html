@@ -1,0 +1,122 @@
+<nav class="site-navbar navbar navbar-default navbar-inverse navbar-fixed-top navbar-mega"
+     role="navigation">
+
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided"
+            data-toggle="menubar">
+      <span class="hamburger-bar"></span>
+    </button>
+    <div class="navbar-brand navbar-brand-center site-gridmenu-toggle portal-header" data-toggle="gridmenu">
+      <span class="navbar-brand-text hidden-xs-down">Портал управления энергией</span>
+    </div>
+    <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
+            data-toggle="collapse">
+      <i class="icon md-search" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="navbar-container container-fluid">
+    <!-- Navbar Collapse -->
+    <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+      <!-- Navbar Toolbar -->
+      <ul class="nav navbar-toolbar">
+        <li class="nav-item hidden-float" id="toggleMenubar">
+          <a class="nav-link" data-toggle="menubar" role="button">
+            <i class="icon hamburger hamburger-arrow-left">
+              <span class="hamburger-bar"></span>
+            </i>
+          </a>
+        </li>
+
+
+        <li class="nav-item hidden-float">
+          <a class="nav-link icon md-search" data-toggle="collapse" data-target="#site-navbar-search"
+             role="button">
+          </a>
+        </li>
+      </ul>
+      <!-- End Navbar Toolbar -->
+      <!-- End Navbar Toolbar Right -->
+    </div>
+    <!-- End Navbar Collapse -->
+
+    <!-- Site Navbar Seach -->
+    <div class="collapse navbar-search-overlap" id="site-navbar-search">
+      <form role="search" [formGroup]="searchForm">
+        <div class="form-group">
+          <div class="input-search">
+            <i class="input-search-icon md-search" aria-hidden="true"></i>
+            <input type="text" class="form-control" formControlName="siteSearch" placeholder="Поиск...">
+            <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search"
+                    data-toggle="collapse" aria-label="Close"></button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- End Site Navbar Seach -->
+  </div>
+</nav>
+
+
+<div class="site-menubar">
+  <div class="site-menubar-body">
+    <div>
+      <div>
+        <ul class="site-menu" data-plugin="menu">
+          <li class="site-menu-item disabled">
+            <a href="javascript:void(0)" disabled>
+              <i class="site-menu-icon md-puzzle-piece" aria-hidden="true"></i>
+              <span class="site-menu-title">Конфигурация</span>
+            </a>
+          </li>
+          <li class="site-menu-item has-sub">
+            <a href="javascript:void(0)">
+              <i class="site-menu-icon md-chart" aria-hidden="true"></i>
+              <span class="site-menu-title">Аналитика</span>
+              <span class="site-menu-arrow"></span>
+            </a>
+            <ul class="site-menu-sub">
+              <li class="site-menu-item">
+                <a class="animsition-link" routerLink='energy-pie'>
+                  <span class="site-menu-title">EnergyPie</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" routerLink='energy-graph'>
+                  <span class="site-menu-title">EnergyGraph</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-menubar-footer">
+    <a href="javascript: void(0);" class="fold-show" data-placement="top" data-toggle="tooltip"
+       data-original-title="Настройки">
+      <span class="icon md-settings" aria-hidden="true"></span>
+    </a>
+    <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Заблокировать">
+      <span class="icon md-eye-off" aria-hidden="true"></span>
+    </a>
+    <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Выход">
+      <span class="icon md-power" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+
+<!-- Page -->
+<div class="page">
+  <router-outlet></router-outlet>
+</div>
+<!-- End Page -->
+
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer-right">
+    © 2018
+  </div>
+</footer>
