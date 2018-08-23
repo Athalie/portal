@@ -8,12 +8,12 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './helpers/guards/auth.guard';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'prefix'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [ AuthGuard ],
+    //canActivate: [ AuthGuard ],
     children: [
       {path: '', component: GeomapComponent},
       {path: 'energy-pie', component: EnergyPieComponent},

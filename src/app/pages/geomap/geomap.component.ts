@@ -10,13 +10,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class GeomapComponent implements OnInit, OnDestroy {
 
   bodyClasses: string[] = 'page-map page-map-full'.split(' ');
-  latitude: number = 18.5204;
-  longitude: number = 73.8567;
+  latitude: number = 55.73448;
+  longitude: number = 37.61558;
   map: any;
 
-
   constructor() {
-
   }
 
   ngOnInit() {
@@ -29,7 +27,7 @@ export class GeomapComponent implements OnInit, OnDestroy {
         })
       ],
       view: new ol.View({
-        center: ol.proj.fromLonLat([ 73.8567, 18.5204 ]),
+        center: ol.proj.fromLonLat([ this.longitude, this.latitude ]),
         zoom: 8
       })
     });
