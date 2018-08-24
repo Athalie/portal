@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -11,7 +12,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
   bodyClasses: string = "dashboard";
   searchForm: FormGroup;
 
-  constructor( private formBuilder: FormBuilder ) {
+  constructor(private formBuilder: FormBuilder,
+              private router: Router,
+              private authenticationService: AuthenticationService) {
 
   }
 
@@ -21,6 +24,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.searchForm = this.formBuilder.group({
       siteSearch: [ '' ]
     });
+  }
+
+  onLogout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
   }
 
 

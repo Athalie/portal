@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
 
     // reset login status
-    this.authenticationService.logout();
+
 
     // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams[ 'returnUrl' ] || '/dashboard';
@@ -55,8 +55,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     this.authenticationService.login(user)
       .subscribe(_ => {
-            this.router.navigate([ this.returnUrl ]);
+            this.authenticationService.logout();
             localStorage.setItem('currentUser', JSON.stringify(user));
+            this.router.navigate([ this.returnUrl ]);
         },
         error =>  this.alertService.error(`Пользователь с электронным адресом ${this.f.email.value} не найден.`)
       );

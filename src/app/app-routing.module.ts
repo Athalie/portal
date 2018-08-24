@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    //canActivate: [ AuthGuard ],
+    canActivate: [ AuthGuard ],
     children: [
       {path: '', component: GeomapComponent},
       {path: 'energy-pie', component: EnergyPieComponent},
