@@ -53,12 +53,14 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     const user = {email: this.f.email.value, password: this.f.password.value};
 
+    localStorage.getItem('currentUser') && this.authenticationService.logout();
+
     this.authenticationService.login(user)
       .subscribe(
         () => {
             localStorage.setItem('currentUser', JSON.stringify(this.cookies.get('csrftoken')));
             this.router.navigate([ this.returnUrl ]);
-            this.rememberLogin && this.authenticationService.logout();
+            !this.rememberLogin && this.authenticationService.logout();
         },
         () => {
           this.alertService.error(`Пользователь с электронным адресом ${this.f.email.value} не найден.`);
