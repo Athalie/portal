@@ -1,7 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AuthenticationService, AlertService } from '../../services';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthenticationService, AlertService } from '../../services';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +9,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: [ './login.component.scss' ]
 })
 export class LoginComponent implements OnInit, OnDestroy {
-  bodyClasses: string[] = 'page-login-v3 layout-full'.split(' ');
+  bodyClasses: string[] = 'animsition page-login-v3 layout-full'.split(' ');
   loginForm: FormGroup;
-  loading = false;
-  submitted = false;
+  submitted: boolean = false;
+  rememberLogin: boolean = true;
   returnUrl: string;
 
-  constructor( private formBuilder: FormBuilder,
+  constructor( private renderer: Renderer2,
+               private formBuilder: FormBuilder,
                private route: ActivatedRoute,
                private router: Router,
                private authenticationService: AuthenticationService,
@@ -23,17 +24,13 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.bodyClasses.forEach(token => document.getElementsByTagName('body')[ 0 ].classList.add(token));
+    this.bodyClasses.forEach(className => this.renderer.addClass(document.body, className));
 
     this.loginForm = this.formBuilder.group({
       email: [ '', Validators.required ],
-      password: [ '', Validators.required ]
+      password: [ '', Validators.required ],
+      rememberLogin: this.rememberLogin
     });
-
-    // reset login status
-
-
-    // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams[ 'returnUrl' ] || '/dashboard';
   }
 
@@ -41,31 +38,34 @@ export class LoginComponent implements OnInit, OnDestroy {
     return this.loginForm.controls;
   }
 
+  handleRememberLoginCheck(e){
+    this.rememberLogin = e.target.checked;
+  }
+
   onSubmit() {
     this.submitted = true;
 
-    // stop here if form is invalid
     if (this.loginForm.invalid) {
       return;
     }
 
-    this.loading = true;
-
     const user = {email: this.f.email.value, password: this.f.password.value};
 
     this.authenticationService.login(user)
-      .subscribe(_ => {
-            this.authenticationService.logout();
+      .subscribe(
+        user => {
+          if (user && user.token) {
             localStorage.setItem('currentUser', JSON.stringify(user));
             this.router.navigate([ this.returnUrl ]);
+            this.rememberLogin && this.authenticationService.logout();
+          }
         },
-        error =>  this.alertService.error(`Пользователь с электронным адресом ${this.f.email.value} не найден.`)
-      );
+        _ => {
+          this.alertService.error(`Пользователь с электронным адресом ${this.f.email.value} не найден.`);
+        });
   }
 
   ngOnDestroy() {
-    this.bodyClasses.forEach(token => document.getElementsByTagName('body')[ 0 ].classList.remove(token));
+    this.bodyClasses.forEach(className => this.renderer.removeClass(document.body, className));
   }
-
-
 }

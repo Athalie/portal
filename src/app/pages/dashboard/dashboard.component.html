@@ -9,10 +9,10 @@
     <div class="navbar-brand navbar-brand-center site-gridmenu-toggle portal-header" data-toggle="gridmenu">
       <span class="navbar-brand-text hidden-xs-down">Портал управления энергией</span>
     </div>
-    <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
-            data-toggle="collapse">
-      <i class="icon md-search" aria-hidden="true"></i>
-    </button>
+    <!--<button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"-->
+            <!--data-toggle="collapse">-->
+      <!--<i class="icon md-search" aria-hidden="true"></i>-->
+    <!--</button>-->
   </div>
 
   <div class="navbar-container container-fluid">
@@ -29,11 +29,11 @@
         </li>
 
 
-        <li class="nav-item hidden-float">
-          <a class="nav-link icon md-search" data-toggle="collapse" data-target="#site-navbar-search"
-             role="button">
-          </a>
-        </li>
+        <!--<li class="nav-item hidden-float">-->
+          <!--<a class="nav-link icon md-search" data-toggle="collapse" data-target="#site-navbar-search"-->
+             <!--role="button">-->
+          <!--</a>-->
+        <!--</li>-->
       </ul>
       <!-- End Navbar Toolbar -->
       <!-- End Navbar Toolbar Right -->
@@ -41,18 +41,18 @@
     <!-- End Navbar Collapse -->
 
     <!-- Site Navbar Seach -->
-    <div class="collapse navbar-search-overlap" id="site-navbar-search">
-      <form role="search" [formGroup]="searchForm">
-        <div class="form-group">
-          <div class="input-search">
-            <i class="input-search-icon md-search" aria-hidden="true"></i>
-            <input type="text" class="form-control" formControlName="siteSearch" placeholder="Поиск...">
-            <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search"
-                    data-toggle="collapse" aria-label="Close"></button>
-          </div>
-        </div>
-      </form>
-    </div>
+    <!--<div class="collapse navbar-search-overlap" id="site-navbar-search">-->
+      <!--<form role="search" [formGroup]="searchForm">-->
+        <!--<div class="form-group">-->
+          <!--<div class="input-search">-->
+            <!--<i class="input-search-icon md-search" aria-hidden="true"></i>-->
+            <!--<input type="text" class="form-control" formControlName="siteSearch" placeholder="Поиск...">-->
+            <!--<button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search"-->
+                    <!--data-toggle="collapse" aria-label="Close"></button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</form>-->
+    <!--</div>-->
     <!-- End Site Navbar Seach -->
   </div>
 </nav>
@@ -94,15 +94,15 @@
   </div>
 
   <div class="site-menubar-footer">
-    <a href="javascript: void(0);" class="fold-show" data-placement="top" data-toggle="tooltip"
-       data-original-title="Настройки">
-      <span class="icon md-settings" aria-hidden="true"></span>
-    </a>
+    <!--<a href="javascript: void(0);" class="fold-show" data-placement="top" data-toggle="tooltip"-->
+       <!--data-original-title="Настройки">-->
+      <!--<span class="icon md-settings" aria-hidden="true"></span>-->
+    <!--</a>-->
     <!--<a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Заблокировать">-->
       <!--<span class="icon md-eye-off" aria-hidden="true"></span>-->
     <!--</a>-->
     <a href="javascript: void(0);" (click)="onLogout()" data-placement="top" data-toggle="tooltip"
-       data-original-title="Выход">
+       data-original-title="Выход" class="logout-btn">
       <span class="icon md-power" aria-hidden="true"></span>
     </a>
   </div>

@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../../services';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { AuthenticationService, AppService } from '../../services';
+import {TreeNode} from '../../models';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,30 +10,30 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   bodyClasses: string = "dashboard";
-  searchForm: FormGroup;
+  menu: TreeNode[];
 
-  constructor(private formBuilder: FormBuilder,
-              private router: Router,
-              private authenticationService: AuthenticationService) {
+  constructor( private renderer: Renderer2,
+               private router: Router,
+               private authenticationService: AuthenticationService,
+               private appService: AppService ) {
 
   }
 
   ngOnInit() {
-    document.getElementsByTagName('body')[ 0 ].classList.add(this.bodyClasses);
-
-    this.searchForm = this.formBuilder.group({
-      siteSearch: [ '' ]
-    });
+    this.renderer.addClass(document.body, this.bodyClasses);  // TODO выкинуть document.body
+    this.appService.getTopLevelMenu().subscribe(data => {
+      this.menu = { ...data };
+      console.log(this.menu);
+      },
+      error => console.log(error));
   }
 
   onLogout() {
     this.authenticationService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate([ '/login' ]);
   }
-
 
   ngOnDestroy() {
-    document.getElementsByTagName('body')[ 0 ].classList.remove(this.bodyClasses);
+    this.renderer.removeClass(document.body, this.bodyClasses);
   }
-
 }
