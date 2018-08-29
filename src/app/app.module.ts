@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule }    from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { EnergyGraphComponent } from './pages/energy-graph/energy-graph.component';
@@ -36,6 +37,7 @@ import { CsrfInterceptor } from './helpers/interceptors/csrf.interceptor';
     AlertService,
     UserService,
     AppService,
+    CookieService,
     { provide: HTTP_INTERCEPTORS, useClass: CsrfInterceptor, multi: true}
   ],
   bootstrap: [ AppComponent ]

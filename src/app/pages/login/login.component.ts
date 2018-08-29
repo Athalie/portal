@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 import { AuthenticationService, AlertService } from '../../services';
 
 @Component({
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit, OnDestroy {
                private route: ActivatedRoute,
                private router: Router,
                private authenticationService: AuthenticationService,
-               private alertService: AlertService ) {
+               private alertService: AlertService,
+               private cookies: CookieService) {
   }
 
   ngOnInit() {
@@ -53,14 +55,12 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     this.authenticationService.login(user)
       .subscribe(
-        user => {
-          if (user && user.token) {
-            localStorage.setItem('currentUser', JSON.stringify(user));
+        () => {
+            localStorage.setItem('currentUser', JSON.stringify(this.cookies.get('csrftoken')));
             this.router.navigate([ this.returnUrl ]);
             this.rememberLogin && this.authenticationService.logout();
-          }
         },
-        _ => {
+        () => {
           this.alertService.error(`Пользователь с электронным адресом ${this.f.email.value} не найден.`);
         });
   }
