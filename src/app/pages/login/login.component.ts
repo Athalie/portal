@@ -57,8 +57,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     this.authenticationService.login(user)
       .subscribe(
-        () => {
-            localStorage.setItem('currentUser', JSON.stringify(this.cookies.get('csrftoken')));
+        () => {// TODO вынести это отсюда
+            localStorage.setItem('currentUser', JSON.stringify(this.cookies.getAll()));
             this.router.navigate([ this.returnUrl ]);
             !this.rememberLogin && this.authenticationService.logout();
         },

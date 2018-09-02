@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule }    from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -11,9 +12,7 @@ import { GeomapComponent } from './pages/geomap/geomap.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthenticationService, AlertService, UserService, AppService } from './services';
 import { AuthGuard } from './helpers/guards/auth.guard';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AlertComponent } from './components/alert/alert.component';
-import { CsrfInterceptor } from './helpers/interceptors/csrf.interceptor';
 
 @NgModule({
   declarations: [
@@ -37,8 +36,7 @@ import { CsrfInterceptor } from './helpers/interceptors/csrf.interceptor';
     AlertService,
     UserService,
     AppService,
-    CookieService,
-    { provide: HTTP_INTERCEPTORS, useClass: CsrfInterceptor, multi: true}
+    CookieService
   ],
   bootstrap: [ AppComponent ]
 })

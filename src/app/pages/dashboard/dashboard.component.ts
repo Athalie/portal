@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.renderer.addClass(document.body, this.bodyClasses);  // TODO выкинуть document.body
     this.appService.getTopLevelMenu().subscribe(data => {
       this.menu = { ...data };
+      console.log(this.menu)
       },
       error => console.log(error));
   }
