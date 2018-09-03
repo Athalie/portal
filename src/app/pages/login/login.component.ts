@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     const user = {email: this.f.email.value, password: this.f.password.value};
 
     localStorage.getItem('currentUser') && this.authenticationService.logout();
-
+    this.cookies.deleteAll();
     this.authenticationService.login(user)
       .subscribe(
         () => {// TODO вынести это отсюда

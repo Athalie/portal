@@ -5,11 +5,11 @@ import { EnergyPieComponent } from './pages/energy-pie/energy-pie.component';
 import { EnergyGraphComponent } from './pages/energy-graph/energy-graph.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { AuthGuard } from './helpers/guards/auth.guard';
+import { AuthGuard, LoginGuard } from './helpers/guards';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
-  {path: 'login', component: LoginComponent},
+  {path: 'login', component: LoginComponent,  canActivate: [ LoginGuard ]},
   {
     path: 'dashboard',
     component: DashboardComponent,

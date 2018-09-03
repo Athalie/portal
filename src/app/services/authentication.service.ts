@@ -8,6 +8,7 @@ export class AuthenticationService {
   }
 
   login( user: User ) { //TODO ответ обязательно специфицировать!!!
+    //TODO вставить сюда работу с токенами
     return this.http.post<any>(`/portal/login/`, user)
   }
 
