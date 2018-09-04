@@ -25,7 +25,7 @@
 
 @media (min-width: 768px) {
   .site-navbar .navbar-header {
-    width: 260px;
+    width: 400px;
   }
 }
 
@@ -35,7 +35,7 @@
 
 @media (min-width: 768px) {
   .site-navbar .navbar-container {
-    margin-left: 260px;
+    margin-left: 400px;
   }
 }
 
@@ -132,7 +132,7 @@ body {
 .site-menubar-footer > a {
   display: block;
   float: left;
-  width: 33.3333333333%;
+  width: 50%;
   height: 76px;
   padding: 26px 0;
   font-size: 16px;
@@ -203,7 +203,7 @@ body {
 
 .site-menu-arrow, .site-menu-badge, .site-menu-label {
   position: absolute;
-  right: 30px;
+  right: 10px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -486,7 +486,7 @@ body.site-gridmenu-active {
 }
 
 .site-sidebar.slidePanel.slidePanel-right, .site-sidebar.slidePanel.slidePanel-left {
-  width: 300px;
+  width: 400px;
   overflow: hidden;
 }
 
@@ -924,7 +924,7 @@ body.site-gridmenu-active {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 260px;
+  width: 400px;
   overflow-y: hidden;
   background: #fff;
   border-right: 1px solid #e0e0e0;
@@ -940,7 +940,7 @@ body.site-gridmenu-active {
 }
 
 .page-aside-left .page-aside + .page-main {
-  margin-left: 260px;
+  margin-left: 400px;
 }
 
 .page-aside-right .page-aside {
@@ -948,7 +948,7 @@ body.site-gridmenu-active {
 }
 
 .page-aside-right .page-aside + .page-main {
-  margin-right: 260px;
+  margin-right: 400px;
 }
 
 .page-aside-right .page-aside .page-aside-inner {
@@ -968,11 +968,11 @@ body.site-gridmenu-active {
 }
 
 .page-aside-fixed.page-aside-left .site-footer {
-  margin-left: 260px;
+  margin-left: 400px;
 }
 
 .page-aside-fixed.page-aside-right .site-footer {
-  margin-right: 260px;
+  margin-right: 400px;
 }
 
 .page-aside-section {
@@ -1205,7 +1205,7 @@ body.site-gridmenu-active {
     position: fixed;
     top: 66.01px;
     z-index: 1100;
-    width: 260px;
+    width: 400px;
     height: calc(100% - 66.01px);
     overflow-y: visible;
     visibility: visible;
@@ -1244,7 +1244,7 @@ body.site-gridmenu-active {
   }
 
   .page-aside-left .page-aside {
-    left: -260px;
+    left: -400px;
   }
 
   .page-aside-left .page-aside + .page-main {
@@ -1252,7 +1252,7 @@ body.site-gridmenu-active {
   }
 
   .page-aside-right .page-aside {
-    right: -260px;
+    right: -400px;
   }
 
   .page-aside-right .page-aside + .page-main {
@@ -1268,7 +1268,7 @@ body.site-gridmenu-active {
   }
 
   .page-aside-left .page-aside {
-    left: -260px !important;
+    left: -400px !important;
   }
 
   .page-aside-left .page-aside.open {
@@ -1280,7 +1280,7 @@ body.site-gridmenu-active {
   }
 
   .page-aside-right .page-aside {
-    right: -260px !important;
+    right: -400px !important;
   }
 
   .page-aside-right .page-aside.open {
@@ -1406,7 +1406,7 @@ body.layout-full {
   }
 
   .css-menubar.page-aside-fixed.page-aside-right .site-footer {
-    margin-right: 260px;
+    margin-right: 400px;
   }
 }
 
@@ -1670,7 +1670,7 @@ body.layout-full {
 }
 
 .site-menubar-fold.page-aside-fixed.page-aside-right .site-footer {
-  margin-right: 260px;
+  margin-right: 400px;
 }
 
 @media (min-width: 768px) {
@@ -1956,8 +1956,8 @@ body.layout-full {
 
 @media (max-width: 767px) and (min-width: 768px) {
   .css-menubar .site-navbar .navbar-header {
-    width: 260px;
-    min-width: 260px;
+    width: 400px;
+    min-width: 400px;
   }
 
   .css-menubar .site-navbar .navbar-container {
@@ -1987,7 +1987,7 @@ body.layout-full {
 
   .css-menubar .site-menu-title {
     display: inline-block;
-    max-width: 160px;
+    max-width: 360px;
   }
 
   .css-menubar .site-menu-title:first-child {
@@ -2033,15 +2033,15 @@ body.layout-full {
   }
 
   .css-menubar .site-menubar {
-    width: 260px;
+    width: 400px;
   }
 
   .css-menubar .site-gridmenu {
-    width: 260px;
+    width: 400px;
   }
 
   .css-menubar .site-menubar-footer {
-    width: 260px;
+    width: 400px;
   }
 
   .css-menubar [data-toggle="menubar"] .hamburger-arrow-left {
@@ -2072,11 +2072,11 @@ body.layout-full {
 
 @media (min-width: 1200px) {
   .css-menubar .page, .css-menubar .site-footer {
-    margin-left: 260px;
+    margin-left: 400px;
   }
 
   .css-menubar.page-aside-fixed.page-aside-left .page-aside {
-    left: 260px;
+    left: 400px;
   }
 
   .css-menubar.page-aside-fixed.page-aside-left .site-footer {
@@ -2084,14 +2084,14 @@ body.layout-full {
   }
 
   .css-menubar.page-aside-fixed.page-aside-right .site-footer {
-    margin-right: 260px;
+    margin-right: 400px;
   }
 }
 
 @media (min-width: 1200px) and (min-width: 768px) {
   .css-menubar .site-navbar .navbar-header {
-    width: 260px;
-    min-width: 260px;
+    width: 400px;
+    min-width: 400px;
   }
 
   .css-menubar .site-navbar .navbar-container {
@@ -2121,7 +2121,7 @@ body.layout-full {
 
   .css-menubar .site-menu-title {
     display: inline-block;
-    max-width: 160px;
+    max-width: 360px;
   }
 
   .css-menubar .site-menu-title:first-child {
@@ -2167,15 +2167,15 @@ body.layout-full {
   }
 
   .css-menubar .site-menubar {
-    width: 260px;
+    width: 400px;
   }
 
   .css-menubar .site-gridmenu {
-    width: 260px;
+    width: 400px;
   }
 
   .css-menubar .site-menubar-footer {
-    width: 260px;
+    width: 400px;
   }
 
   .css-menubar [data-toggle="menubar"] .hamburger-arrow-left {
@@ -2205,11 +2205,11 @@ body.layout-full {
 }
 
 .site-menubar-unfold .page, .site-menubar-unfold .site-footer {
-  margin-left: 260px;
+  margin-left: 400px;
 }
 
 .site-menubar-unfold.page-aside-fixed.page-aside-left .page-aside {
-  left: 260px;
+  left: 400px;
 }
 
 .site-menubar-unfold.page-aside-fixed.page-aside-left .site-footer {
@@ -2217,13 +2217,13 @@ body.layout-full {
 }
 
 .site-menubar-unfold.page-aside-fixed.page-aside-right .site-footer {
-  margin-right: 260px;
+  margin-right: 400px;
 }
 
 @media (min-width: 768px) {
   .site-menubar-unfold .site-navbar .navbar-header {
-    width: 260px;
-    min-width: 260px;
+    width: 400px;
+    min-width: 400px;
   }
 
   .site-menubar-unfold .site-navbar .navbar-container {
@@ -2232,13 +2232,17 @@ body.layout-full {
 }
 
 .site-menubar-unfold .site-menu-category {
-  padding: 0 24px;
-  margin-top: 20px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 38px;
-  color: #757575;
-  text-transform: uppercase;
+  padding: 0 10px ;
+  font-size: 14px;
+  color: #424242 !important;
+  line-height: 36px;
+  /*padding: 0 24px;*/
+  /*margin-top: 20px;*/
+  /*font-size: 12px;*/
+  /*font-weight: 500;*/
+  /*line-height: 38px;*/
+  /*color: #757575;*/
+  /*text-transform: uppercase;*/
   transition: all .25s, font .1s .15s, color .1s .15s;
 }
 
@@ -2252,7 +2256,7 @@ body.layout-full {
 
 .site-menubar-unfold .site-menu-title {
   display: inline-block;
-  max-width: 160px;
+  max-width: 360px;
 }
 
 .site-menubar-unfold .site-menu-title:first-child {
@@ -2289,7 +2293,7 @@ body.layout-full {
 }
 
 .site-menubar-unfold .site-menu > .site-menu-item > a {
-  padding: 0 30px;
+  padding: 0 10px;
   line-height: 38px;
 }
 
@@ -2298,15 +2302,15 @@ body.layout-full {
 }
 
 .site-menubar-unfold .site-menubar {
-  width: 260px;
+  width: 400px;
 }
 
 .site-menubar-unfold .site-gridmenu {
-  width: 260px;
+  width: 400px;
 }
 
 .site-menubar-unfold .site-menubar-footer {
-  width: 260px;
+  width: 400px;
 }
 
 .site-menubar-unfold [data-toggle="menubar"] .hamburger-arrow-left {
@@ -2346,8 +2350,8 @@ body.layout-full {
   }
 
   .site-menubar-open .page, .site-menubar-open .site-footer {
-    -webkit-transform: translate3d(260px, 0, 0);
-    transform: translate3d(260px, 0, 0);
+    -webkit-transform: translate3d(400px, 0, 0);
+    transform: translate3d(400px, 0, 0);
   }
 
   .site-menubar-changing {
@@ -2480,8 +2484,8 @@ body.site-navbar-small {
   .site-menubar {
     top: 66.01px;
     height: calc(100% - 66.01px);
-    -webkit-transform: translate3d(-260px, 0, 0);
-    transform: translate3d(-260px, 0, 0);
+    -webkit-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-perspective: 1000;
@@ -2561,13 +2565,13 @@ body.site-navbar-small {
 
 @media (min-width: 1200px) {
   .css-menubar .site-menubar-flipped .page, .css-menubar .site-menubar-flipped .site-footer {
-    margin-right: 260px;
+    margin-right: 400px;
     margin-left: 0;
   }
 }
 
 .site-menubar-unfold.site-menubar-flipped .page, .site-menubar-unfold.site-menubar-flipped .site-footer {
-  margin-right: 260px;
+  margin-right: 400px;
   margin-left: 0;
 }
 
@@ -2585,8 +2589,8 @@ body.site-navbar-small {
   }
 
   .site-menubar-flipped.site-menubar-open .page, .site-menubar-flipped.site-menubar-open .site-footer {
-    -webkit-transform: translate3d(-260px, 0, 0);
-    transform: translate3d(-260px, 0, 0);
+    -webkit-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0);
   }
 
   .site-menubar-flipped.site-menubar-open .site-menubar {
@@ -2635,8 +2639,8 @@ body.site-navbar-small {
 
 @media (max-width: 767px) {
   .site-menubar-flipped .site-menubar {
-    -webkit-transform: translate3d(260px, 0, 0);
-    transform: translate3d(260px, 0, 0);
+    -webkit-transform: translate3d(400px, 0, 0);
+    transform: translate3d(400px, 0, 0);
   }
 }
 
@@ -12640,7 +12644,7 @@ h3.example-title {
   bottom: 2px;
   left: 0;
   display: block;
-  width: 260px;
+  width: 400px;
   font-size: 13px;
   font-weight: 300;
   line-height: 13px;
